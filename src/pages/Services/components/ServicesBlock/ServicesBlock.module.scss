@@ -1,0 +1,75 @@
+@import '../../../../styles/variables/index.scss';
+@import '../../../../styles/components/container.scss';
+@import '../../../../styles/components/button/index.scss';
+@import '../../../../styles/mixins/typography.scss';
+
+.servicesBlock {
+    &__wrapper {
+        @extend .container;
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 120px;
+    }
+
+    &__item {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 90px;
+        @include mobile {
+            grid-template-columns: 100%;
+        }
+    }
+    &__itemLeft {
+        @extend .servicesBlock__item;
+        grid-template-areas: 
+        "itemImages itemBody"; 
+    }
+
+    &__itemRight {
+        @extend .servicesBlock__item;
+        grid-template-areas: 
+        "itemBody itemImages"; 
+    }
+
+    &__itemImages {
+        grid-area: itemImages;
+        img {
+            width: 100%;
+        }
+    }
+
+    &__itemBody {
+        grid-area: itemBody;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    &__itemTitle {
+        @extend .title-md-b;
+        padding-bottom: 24px;
+        color: $primary-dark;
+    }
+
+    &__itemDesc {
+        @extend .txt-base;
+        padding-bottom: 50px;
+        line-height: 160%;
+        color: $color-gray-700;
+    }
+
+    &__itemBtn {
+        @extend .btn;
+        @extend .btn-color-transparent-fill;
+        @extend .btn-size-md;
+        @extend .btn-type-rectangle;
+    }
+}
+
+.modal{
+
+}

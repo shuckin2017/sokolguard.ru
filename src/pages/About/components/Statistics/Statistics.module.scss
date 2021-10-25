@@ -1,0 +1,51 @@
+@import '../../../../styles/variables/index.scss';
+@import '../../../../styles/components/container.scss';
+@import '../../../../styles/mixins/typography.scss';
+
+.statistics {
+    background-color: $bg-white;
+    padding: 0 0 90px;
+    &__wrapper {
+        @extend .container;
+    }
+
+    &__content {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr; 
+        grid-template-rows: 1fr; 
+        justify-content: center;
+        row-gap: 30px;
+        @include mobile { 
+            grid-template-columns: 100%;
+         }
+    }
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__icon {
+        svg {
+            width: 48px;
+            padding-bottom: 20px;
+            fill: $color-gray-600;
+        }
+    }
+
+    &__titleItem {
+        @extend .display-txt-sm;
+        color: $primary-color;
+
+    }
+
+    &__subTitleItem {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 1.4rem;
+        line-height: 150%;
+        text-align: center;
+        color: $primary-dark;
+    }
+}

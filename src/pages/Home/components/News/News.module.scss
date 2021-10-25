@@ -1,0 +1,219 @@
+@import '../../../../styles/variables/index.scss';
+@import '../../../../styles/components/container.scss';
+@import '../../../../styles/components/button/index.scss';
+
+.news {
+  background-color: $bg-light;
+  padding: 90px 0;
+}
+
+.wrapper {
+  @extend .container;
+}
+.newsTop {
+  display: grid;
+  grid-template-columns: minmax(320px, 800px) 1fr;
+  grid-template-rows: 410px;
+  gap: 40px;
+  padding-bottom: 25px;
+
+  @include desktop-sm {
+    grid-template-columns: minmax(320px, 800px) 1fr;
+    gap: 30px;
+  }
+
+  @include tablet {
+    grid-template-columns: 100%;
+  }
+}
+
+.newsCardLarge {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  padding: 25px 30px;
+  background-color: $color-white;
+  overflow: hidden;
+  cursor: pointer;
+
+  &:hover .newsLargeImg img {
+    transform: scale(1.05);
+  }
+}
+
+.newsLargeTitle {
+  display: flex;
+  align-items: flex-end;
+  flex: 100px 1 1;
+  padding-bottom: 25px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 130%;
+  color: $color-white;
+  z-index: 20;
+}
+
+.newsLargeImg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+
+  img {
+    transition: all 0.3s ease-out;
+  }
+
+  &:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      180deg,
+      rgba(19, 19, 19, 0) 28.69%,
+      #131313 100%
+    );
+    transition: opacity 0.2s ease-in-out;
+  }
+}
+
+.newsTagBg {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 70px;
+  height: 25px;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 140%;
+  text-transform: uppercase;
+  color: $color-white;
+  background-color: $primary-color;
+  border-radius: 2px;
+  z-index: 20;
+}
+
+.newsCardMedium {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 30px;
+  background-color: $color-white;
+}
+
+.newsMediumTitle {
+  display: flex;
+  align-items: flex-end;
+  flex: 100px 1 1;
+  padding-bottom: 25px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 31px;
+  color: $primary-dark;
+}
+
+.newsTag {
+  padding-bottom: 15px;
+  font-style: normal;
+  font-weight: 682;
+  font-size: 12px;
+  line-height: 140%;
+  text-transform: uppercase;
+  color: $primary-color;
+}
+
+.newsMediumImg {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  img {
+    width: 164px;
+    height: 180px;
+  }
+}
+.newsBottom {
+  display: grid;
+  grid-template-columns: minmax(20px, 380px) minmax(20px, 380px) minmax(20px, 380px);
+  gap: 40px;
+  @include tablet {
+    grid-template-columns: 100%;
+    gap: 20px;
+  }
+}
+.newsCardSmall {
+  color: $primary-dark;
+}
+
+.newsData {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 140%;
+  color: $color-white;
+  z-index: 20;
+}
+
+.newsSmallTitle {
+    display: flex;
+    padding-bottom: 20px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 140%;
+    color: $primary-dark;
+    transition: all 0.3s ease-out;
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+.newsDataSmall {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 140%;
+    color: #848E99;
+}
+
+.newsButtom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  button {
+    @extend .btn;
+    flex-direction: row;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 40px;
+    color: $primary-color;
+    &:hover {
+        color: $primary-color-darken;
+    }
+
+    &::after {
+        content: '';
+        background-image: url(../../../../assets/icons/arrows-right.svg);
+        width: 24px;
+        height: 24px;
+    }
+  }
+}
+
+.newsPagination {
+    display: flex;
+    span {
+        display: block;
+        margin-right: 10px;
+        width: 6px;
+        height: 6px;
+        background-color: $primary-color;
+        border-radius: 50%;
+        cursor: pointer;
+    }
+}

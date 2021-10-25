@@ -1,0 +1,311 @@
+@import '../../styles/variables/index.scss';
+@import '../../styles/components/container.scss';
+@import '../../styles/components/button/index.scss';
+@import '../../styles//mixins/form.scss';
+
+.footer {
+    &__callback {
+        width: 100%;
+        height: 626px;
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+    &__callbackWrapper {
+        @extend .container;
+
+        display: flex;
+        position: relative;
+    }
+
+    &__callbackContent {
+        position: absolute;
+        top: 50px;
+        right: 0;
+        padding: 48px 40px;
+        background-color: $bg-white;
+        border: 1px solid #e5e8ed;
+        box-shadow: 0px 60px 80px -20px rgba(30, 33, 44, 0.16),
+            0px 26px 24px -10px rgba(30, 33, 44, 0.1),
+            0px 12px 10px -6px rgba(30, 33, 44, 0.08),
+            0px 4px 4px -4px rgba(30, 33, 44, 0.05);
+        border-radius: 4px;
+        @include mobile {
+            padding: relative;
+            left: 0;
+        }
+    }
+
+    &__callbackForm {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__callbackLabel {
+        display: flex;
+        flex-direction: column;
+        width: 415px;
+        padding-bottom: 20px;
+
+        span {
+          display: inline;
+          padding-bottom: 10px;
+        }
+
+        @include mobile {
+            width: 100%;
+        }
+    }
+
+    &__callbackInput {
+        @extend .form-content__input;
+        
+    }
+
+    &__callbackBtnAction {
+        @extend .btn;
+        @extend .btn-color-primary;
+        @extend .btn-size-md;
+        @extend .btn-type-rectangle;
+    }
+}
+.wrapper {
+    background-color: $bg-dark;
+    padding-top: 70px;
+}
+
+.footerTop {
+    @extend .container;
+    padding-bottom: 40px;
+    display: flex;
+    justify-content: space-between;
+    gap: 80px;
+
+    @include mobile {
+        flex-direction: column;
+    }
+}
+
+.logo {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    a {
+        padding-bottom: 20px;
+    }
+    svg {
+        width: 180px;
+        path:first-child {
+            fill: $primary-color;
+        }
+
+        path {
+            fill: $color-white;
+        }
+    }
+}
+.subTitle {
+    padding-bottom: 20px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 150%;
+    opacity: 0.6;
+    color: $color-white;
+}
+
+.footerSocial {
+    padding-bottom: 20px;
+}
+
+.privace {
+    font-style: normal;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 14px;
+    color: $color-gray;
+    transition: all 0.1s ease-out;
+    &:hover {
+        color: $color-white;
+        text-decoration: underline;
+    }
+}
+.menu {
+    display: flex;
+    justify-content: space-between;
+    flex: 1 1 auto;
+    @include mobile {
+        flex-direction: column;
+    }
+}
+
+.contact {
+    flex: 1;
+}
+
+.phone {
+    display: flex;
+    align-items: center;
+    padding-bottom: 27px;
+    svg {
+        width: 24px;
+
+        path {
+            fill: $color-gray;
+        }
+    }
+}
+.phoneInfo {
+    display: flex;
+    flex-direction: column;
+    padding-left: 15px;
+    a {
+        font-style: normal;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 21px;
+        color: $color-white;
+        transition: all 0.1s ease-out;
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+    span {
+        font-style: normal;
+        font-weight: 300;
+        font-size: 16px;
+        line-height: 19px;
+        color: $color-gray;
+    }
+}
+
+.email {
+    display: flex;
+    align-items: center;
+    padding-bottom: 30px;
+    svg {
+        width: 24px;
+
+        path {
+            fill: $color-gray;
+        }
+    }
+
+    a {
+        padding-left: 15px;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 21px;
+        color: $color-white;
+        transition: all 0.1s ease-out;
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
+
+.address {
+    display: flex;
+    align-items: center;
+    padding-bottom: 30px;
+    svg {
+        width: 20px;
+
+        path {
+            fill: $color-gray;
+        }
+    }
+    a {
+        padding-left: 19px;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 21px;
+        color: $color-white;
+        transition: all 0.1s ease-out;
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+    span {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 19px;
+        color: $color-white;
+    }
+}
+
+.footerBtn {
+    @extend .btn;
+    @extend .btn-color-primary;
+    @extend .btn-size-md;
+    @extend .btn-type-rectangle;
+}
+
+.menuTitle {
+    padding-bottom: 20px;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: $color-white;
+
+    @include mobile {
+        padding-bottom: 10px;
+        padding-top: 40px;
+    }
+}
+
+.menuLink {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 160%;
+    color: $color-gray;
+    padding-bottom: 7px;
+    transition: all 0.1s ease-out;
+    &:hover {
+        color: $color-white;
+    }
+}
+
+.footerBottom {
+    border-top: 1px solid #4f4f4f;
+    padding: 20px 0;
+}
+
+.innerBottom {
+    @extend .container;
+    display: flex;
+    justify-content: space-between;
+    @include mobile {
+        flex-direction: column;
+        height: 70px;
+    }
+}
+
+.reserved {
+    font-style: normal;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 19px;
+    color: $color-gray;
+}
+
+.made {
+    font-style: normal;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 19px;
+    color: $primary-color;
+    transition: all 0.3s ease-out;
+    &:hover a {
+        text-decoration: underline;
+    }
+}

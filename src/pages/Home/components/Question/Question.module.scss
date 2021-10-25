@@ -1,0 +1,82 @@
+@import '../../../../styles/variables/index.scss';
+@import '../../../../styles/components/container.scss';
+@import '../../../../styles/components/button/index.scss';
+@import '../../../../styles/mixins/index.scss';
+
+
+.question {
+    background-color: $bg-light;
+    padding: 90px 0;
+}
+
+.wrapper {
+ @extend .container;
+}
+
+.headeBlock {
+    
+}
+.titleBlock {
+    @extend .title-sm-b;
+    position: relative;
+    display: inline;
+    color: $primary-dark;
+    z-index: 10;
+    &:after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        bottom: -5px;
+        left: 0;
+        background-color: $primary-color;
+    }
+}
+
+.content {
+    display: grid;
+    grid-template-columns: 1fr minmax(320px, 710px);
+    gap: 90px;
+    padding-top: 25px;
+
+    @include mobile {
+        grid-template-columns: 100%;
+     }
+}
+
+.information {
+    display: flex;
+    flex-direction: column;
+    
+    span {
+        padding-bottom: 40px;
+        font-style: normal;
+        font-weight: 300;
+        font-size: 16px;
+        line-height: 22px;
+        color: $primary-dark;
+    }
+}
+
+.accorfion {
+   width: 100%;
+}
+
+
+.accItem {
+
+}
+.accHeade {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    color: $primary-dark;
+}
+
+.actionBtn {
+    @extend .btn;
+    @extend .btn-color-primary;
+    @extend .btn-size-md;
+    @extend .btn-type-rectangle;
+}

@@ -1,0 +1,86 @@
+@import '../../../../styles/variables/index.scss';
+@import '../../../../styles/components/container.scss';
+@import '../../../../styles/components/button/index.scss';
+
+.request {
+    padding: 60px 0;
+    position: relative;
+
+    &::after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 50%;
+        bottom: 0;
+        left: 0;
+        background-color: $bg-light;
+        z-index: -10;
+    }
+    &__wrapper {
+        @extend .container;
+        background-color: $bg-white;
+        border-radius: 4px;
+        box-shadow: 0px 80px 80px -20px rgba(154, 156, 165, 0.08), 0px 30px 24px -10px rgba(154, 156, 165, 0.05), 0px 12px 10px -6px rgba(154, 156, 165, 0.04), 0px 4px 4px -4px rgba(30, 33, 44, 0.03);
+        
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 48px 60px;
+        @include mobile {
+            padding: 10px 15px;
+         }
+        
+    }
+    &__title {
+        padding-bottom: 32px;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 28px;
+        color: $primary-dark;
+
+    }
+    &__form {
+        display: flex;
+        align-items:flex-end;
+        justify-content: space-evenly;
+        width: 100%;
+
+        @include mobile { 
+            flex-direction: column;
+        }
+    }
+    
+    &__label {
+        display: flex;
+        flex-direction: column;
+        
+        span {
+            display: block;
+            padding-bottom: 7px;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 150%;
+            color: #424551;
+        }
+    }
+
+    &__input {  
+        width: 260px;
+        padding: 11px 16px;
+        border: 1px solid #D7DADD;
+        border-radius: 4px;
+
+    }   
+
+    &__btnAction {
+        @extend .btn;
+        @extend .btn-color-primary;
+        @extend .btn-size-md;
+        @extend .btn-type-rectangle;
+    }
+}

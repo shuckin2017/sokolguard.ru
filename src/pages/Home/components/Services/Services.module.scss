@@ -1,0 +1,217 @@
+@import '../../../../styles/variables/index.scss';
+@import '../../../../styles/components/container.scss';
+@import '../../../../styles/components/button/index.scss';
+@import '../../../../styles/mixins/index.scss';
+
+.services {
+    background-color: $bg-light;
+    padding: 90px 0;
+
+    &__wrapper {
+        @extend .container;
+    }
+
+    &__headBlock {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        &::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 1px;
+            bottom: 0;
+            left: 0;
+            background-color: $color-gray-300;
+            @include mobile {
+                display: none;
+            }
+        }
+    }
+
+    &__title {
+        @extend .title-sm-b;
+        position: relative;
+        display: inline;
+        text-transform: uppercase;
+        color: $primary-dark;
+        z-index: 10;
+        &:after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            bottom: 0px;
+            left: 0;
+            background-color: $primary-color;
+        }
+    }
+
+    &__btnHead {
+        @extend .btn;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 150%;
+        color: $primary-color;
+        @include mobile {
+            display: none;
+        }
+    }
+
+    &__content {
+        display: flex;
+        justify-content: space-between;
+        padding-top: 80px;
+        @include mobile {
+            flex-direction: column;
+            gap: 30px;
+        }
+    }
+
+    &__item {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        width: 285px;
+        height: 285px;
+        background-color: $bg-white;
+        border: 1px solid $color-gray-300;
+        box-shadow: 0px 80px 80px -20px rgba(154, 156, 165, 0.08),
+            0px 30px 24px -10px rgba(154, 156, 165, 0.05),
+            0px 12px 10px -6px rgba(154, 156, 165, 0.04),
+            0px 4px 4px -4px rgba(30, 33, 44, 0.03);
+        border-radius: 4px;
+        overflow: hidden;
+        transition: 0.4s;
+        &::before {
+            position: absolute;
+            content: '';
+            left: 0;
+            bottom: 0;
+            width: 0%;
+            height: 4px;
+            background-color: $primary-color;
+            -webkit-transition: all 0.5s ease 0s;
+            -o-transition: all 0.5s ease 0s;
+            transition: all 0.5s ease 0s;
+            opacity: 0;
+            visibility: hidden;
+            z-index: 10;
+        }
+        &:hover::before {
+            width: 100%;
+            opacity: 1;
+            visibility: visible;
+        }
+
+        &:hover {
+            box-shadow: 0px 60px 80px -20px rgba(30, 33, 44, 0.16),
+                0px 26px 24px -10px rgba(30, 33, 44, 0.1),
+                0px 12px 10px -6px rgba(30, 33, 44, 0.08),
+                0px 4px 4px -4px rgba(30, 33, 44, 0.05);
+
+            & .services__itemTitle {
+                color: $color-white;
+            }
+
+            & .services__itemIcon {
+                svg {
+                    fill: $color-white;
+                }
+            }
+
+            & .services__itemBg {
+                visibility: visible;
+                opacity: 1;
+            }
+
+            & .services__itemBtn {
+                color: $primary-color;
+            }
+        }
+
+        @include mobile { 
+            width: 100%;
+        }
+    }
+
+    &__itemWrapper {
+        display: flex;
+        justify-content: flex-start;
+        flex-direction: column;
+        align-items: center;
+        z-index: 10;
+    }
+    &__itemIcon {
+        width: 54px;
+        padding-bottom: 20px;
+        
+        svg {
+            fill: $primary-color;
+            transition: all 0.4s ease .3s;
+        }
+    }
+
+    &__itemTitle {
+        text-align: center;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 150%;
+        color: $primary-dark;
+        transition: all 0.4s ease .3s;
+    }
+
+    &__itemBg {
+        position: absolute;
+        opacity: 0;
+        width: 100%;
+        height: 100%;
+        visibility: hidden;
+        object-fit: cover;
+        border-radius: 4px;
+        transition: all 0.4s ease .3s;
+        filter: brightness(50%);
+    }
+
+    &__itemBtn {
+        @extend .btn;
+        @extend .btn-size-sm;
+        margin-top: 25px;
+        color: $color-gray-700;
+        transition: all 0.4s ease .3s;
+    }
+
+    &__bottomBlock {
+        padding-top: 80px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        @include mobile { 
+            flex-direction: column;
+        }
+    }
+
+    &__bottomTitle {
+        font-style: normal;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 150%;
+        color: $primary-dark;
+        padding-right: 40px;
+        @include mobile { 
+            padding-bottom: 30px;
+        }
+    }
+
+    &__bottomBtn {
+        @extend .btn;
+        @extend .btn-color-primary;
+        @extend .btn-size-md;
+        @extend .btn-type-rectangle;
+    }
+}

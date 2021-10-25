@@ -1,0 +1,33 @@
+.headeBlock {
+    position: relative;
+    &::after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 1px;
+        bottom: 4px;
+        left: 0;
+        background-color: $color-gray;
+    }
+}
+.titleBlock {
+    position: relative;
+    display: inline;
+    font-family: $secondary-font-family;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 42px;
+    text-transform: uppercase;
+    color: $primary-dark;
+    z-index: 10;
+    &:after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        bottom: 0;
+        left: 0;
+        background-color: $primary-color;
+    }
+}

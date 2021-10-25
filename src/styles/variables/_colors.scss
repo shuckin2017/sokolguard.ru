@@ -1,0 +1,18 @@
+$primary-color: #FF5A30;
+$primary-dark: #1E212C;
+$color-dark: #3F3F3F;
+$color-gray: #C4C4C4;
+$color-gray-800: #424551;
+$color-gray-700: #787A80;
+$color-gray-600: #9A9CA5;
+$color-gray-300: #E5E8ED;
+$color-gray-200: #F4F5F6;
+$color-white: #ffffff;
+
+$bg-light: #F3F3F3;
+$bg-dark: #1E212C;
+$bg-white: #ffffff;
+
+/* hover */
+$primary-color-lighten: lighten($primary-color, 10%);
+$primary-color-darken: darken($primary-color, 10%);

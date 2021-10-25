@@ -1,0 +1,234 @@
+@import '../../styles/variables/index.scss';
+@import '../../styles/components/container.scss';
+@import '../../styles/components/button/index.scss';
+
+.header {
+    &__wrapper {
+        @extend .container;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        @include mobile {
+            display: none;
+        }
+    }
+
+    &__logo {
+        svg {
+            width: 180px;
+            path:first-child {
+                fill: $primary-color;
+            }
+            path {
+                fill: $primary-dark;
+            }
+        }
+    }
+
+    &__menu {
+    }
+
+    &__menuList {
+        display: flex;
+    }
+
+    &__menuLink {
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 160%;
+        color: $primary-dark;
+        transition: $default-easing;
+
+        &:not(:last-child) {
+            margin-right: 40px;
+        }
+        &:hover {
+            color: $primary-color;
+        }
+    }
+
+    &__contacts {
+        display: flex;
+    }
+
+    &__phone {
+        display: flex;
+        padding-right: 30px;
+        svg {
+            width: 32px;
+            path {
+                fill: $primary-color;
+            }
+        }
+    }
+
+    &__contactBlock {
+        display: flex;
+        flex-direction: column;
+        padding-left: 10px;
+    }
+
+    &__mail {
+        display: flex;
+        align-items: center;
+        svg {
+            width: 32px;
+            path {
+                fill: $primary-color;
+            }
+        }
+    }
+
+    &__contactLink {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 100%;
+        color: $primary-dark;
+    }
+
+    &__contactSubLink {
+        font-style: normal;
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 150%;
+        color: $primary-dark;
+    }
+
+    &__linkActive {
+        color: $primary-dark !important;
+    }
+}
+
+.headerMobil {
+    display: none;
+    background-color: $primary-color;
+    @include mobile {
+        display: flex;
+    }
+
+    &__wrapper {
+        @extend .container;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 100%;
+        padding-top: 17px;
+        padding-bottom: 17px;
+    }
+    &__icon {
+        @extend .btn;
+        &:not(:last-child) {
+            margin-right: 30px;
+        }
+        svg {
+            width: 28px;
+            path {
+                fill: $color-white;
+            }
+        }
+    }
+
+    &__logo {
+        flex: 1;
+        svg {
+            width: 180px;
+            path {
+                fill: $color-white;
+            }
+        }
+    }
+}
+
+.mobileNav {
+    &__overlay {
+        
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100vh;
+        width: 90vw;
+        transform: translateX(0);
+        transition: 0.3s cubic-bezier(0.4, 0, 1, 1);
+        background-color: $color-white;
+        z-index: 100;
+    }
+
+    &__overlayHidden{
+        display: none;
+        transform: translateX(-100vw);
+        opacity: 0;
+    }
+    &__wrapper {
+        padding: 30px;
+        position: relative;
+    }
+    &__close {
+        @extend .btn;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        svg {
+            width: 28px;
+            path {
+                fill: $color-dark;
+            }
+        }
+    }
+
+    &__menu {
+    }
+
+    &__menuList {
+        display: flex;
+        flex-direction: column;
+        
+    }
+    &__menuLink {
+        color: $color-dark;
+    }
+}
+
+.mobileSearch { 
+    display: none;
+    &__overlay  {
+        position: fixed;
+        top: 80px;
+        left: 0;
+        height: 30vh;
+        width: 100vw;
+        transform: translateX(0);
+        transition: 0.3s cubic-bezier(0.4, 0, 1, 1);
+        background-color: $color-white;
+        z-index: 100;
+    }
+    &__wrapper {
+        padding: 30px;
+        position: relative;
+    }
+    
+    &__overlayHidden {
+        display: none;
+        transform: translateX(-100vw);
+        opacity: 0;
+    }
+}
+
+.header {
+    padding: 15px 0;
+    background-color: $bg-white;
+    @include mobile {
+        padding: 0;
+    }
+    
+}
+
+.header__fill {
+    padding: 15px 0;
+    background-color: transparent;
+    position: absolute;
+    @include mobile {
+        padding: 0;
+    }
+}

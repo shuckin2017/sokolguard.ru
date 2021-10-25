@@ -1,0 +1,55 @@
+.btn-color {
+    &-light {
+        --bgColor: var(--color-primary-rgb);
+        --textColor: var(--color-primary-rgb);
+
+        color: RGB(var(--textColor));
+        border-color: RGB(var(--bgColor));
+        background-color: RGB(var(--bgColor));
+        &:hover,
+        &:focus {
+            background-color: transparent;
+            color: RGB(var(--bgColor));
+        }
+    }
+
+    &-transparent {
+        border-color: $color-white;
+        color: $color-white;
+        &:hover,
+        &:focus {
+            border-color: rgba(var(--borderColor), 0.64);
+        }
+    }
+
+    &-transparent-fill {
+        border-color: $color-white;
+        background-color: $color-white;
+        color: $primary-color;
+        &:hover,
+        &:focus {
+            border-color: rgba(var(--color-light), 0.64);
+        }
+    }
+
+    &-primary {
+        color: $color-white;
+        border-color: $primary-color;
+        background-color: $primary-color;
+        &:hover,
+        &:focus {
+            background-color: transparent;
+            border-color: $primary-color;
+            color: $primary-color;
+        }
+    }
+
+    &-dark {
+        border-color: rgba(var(--color-dark), 0.24);
+        color: rgba(var(--color-dark), 1);
+        &:hover,
+        &:focus {
+            border-color: rgba(var(--color-dark), 0.64);
+        }
+    }
+}

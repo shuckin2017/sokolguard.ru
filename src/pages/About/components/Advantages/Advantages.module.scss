@@ -1,0 +1,31 @@
+@import '../../../../styles/variables/index.scss';
+@import '../../../../styles/components/container.scss';
+@import '../../../../styles/mixins/index.scss';
+
+.advantages {
+    padding: 90px 0;
+    background-color: $bg-light;
+    &__wrapper {
+        @extend .container;
+    }
+
+    &__titleBlock {
+    }
+
+    &__title {
+        @extend .title-sm-b;
+        position: relative;
+        display: inline;
+        color: $primary-dark;
+        z-index: 10;
+        &:after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            bottom: -5px;
+            left: 0;
+            background-color: $primary-color;
+        }
+    }
+}

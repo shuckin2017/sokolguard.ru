@@ -1,0 +1,36 @@
+@import '../../../../styles/variables/index.scss';
+@import '../../../../styles/components/container.scss';
+@import '../../../../styles/components/button/index.scss';
+
+.partners {
+    background-color: $bg-white;
+    padding: 90px 0 20px 0;
+    overflow: hidden;
+
+    &__item {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+.wrapper {
+    @extend .container;
+    
+}
+
+.listPartners {
+    display: flex;
+    flex: 1 1 auto;
+    justify-content: space-between;
+    padding: 0 20px;
+    
+}
+
+.btnArrowLeft {
+    @extend .btn;
+}
+
+.btnArrowRight{
+    @extend .btn;
+}

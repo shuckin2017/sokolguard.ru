@@ -1,0 +1,65 @@
+@import './media.scss';
+
+.form-content {
+    &__list {
+        @include mobile {
+            padding-bottom: 40px;
+        }
+    }
+
+    &__item {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+
+        &--input {
+        }
+
+        &--txt {
+            font-size: 1.4rem;
+            line-height: 1.28em;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+        }
+    }
+
+    &__input {
+        position: relative;
+        padding: 11px 16px;
+        border: none;
+        background-color: transparent;
+        outline: none;
+        border-radius: 4px;
+        border: 1px solid #d7dadd;
+        background: $color-gray-200;
+
+        
+        &::placeholder {
+            color: $color-gray-600;
+        }
+
+        &:active::placeholder,
+        &:focus::placeholder,
+        &:not(:placeholder-shown) {
+            background-color: $color-white;
+            color: $color-gray-700;
+        }
+
+        &:focus {
+            border: 1px solid rgba(255, 90, 48, 0.4);
+            box-sizing: border-box;
+            box-shadow: 0px 80px 80px -20px rgba(255, 90, 48, 0.08),
+                0px 30px 24px -10px rgba(255, 90, 48, 0.05),
+                0px 12px 10px -6px rgba(255, 90, 48, 0.04),
+                0px 4px 4px -4px rgba(30, 33, 44, 0.03);
+            border-radius: 4px;
+            background-color: $color-white;
+        }
+
+    }
+
+    &__label {
+        padding-top: 27px;
+        color: rgba(var(--color-light), 0.48);
+    }
+}

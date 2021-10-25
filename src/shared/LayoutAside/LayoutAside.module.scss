@@ -1,0 +1,76 @@
+@import '../../styles/variables/index.scss';
+@import '../../styles/components/container.scss';
+@import '../../styles/mixins/typography.scss';
+
+.layout {
+
+    &__wrapperPage {
+        
+    }
+    &__header {
+        height: 400px;
+        background-color: $color-gray-200;
+        position: relative;
+        z-index: -10;
+        display: flex;
+        justify-content: center;
+        img {
+            height: 100%;
+            position: absolute;
+            top: 0;
+            right: 0;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        @include mobile { 
+            height: 300px;
+        }
+    }
+
+    &__headerContent {
+        @extend .container;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        z-index: 10; 
+    }
+
+    &__headerBreadCrumds {
+        @extend .txt-sm-b;
+        padding-bottom: 40px;
+        font-style: normal;
+        line-height: 150%;
+        color: $color-gray-800;
+    }
+
+    &__headerTitle {
+        @extend .display-txt-lg;
+        padding-bottom: 24px;
+        font-style: normal;
+        line-height: 130%;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        color: $primary-dark;
+    }
+
+    &__headerSubTitle {
+        @extend .txt-lg-r;
+        max-width: 600px;
+        font-style: normal;
+        line-height: 150%;
+        color: $color-gray-700;
+        @include mobile { 
+            color: $primary-dark;
+        }
+    }
+
+    &__wrapper {
+        padding-top: 120px;
+        padding-bottom: 100px;
+        @include mobile {
+            padding-top: 90px;
+            padding-bottom: 70px;
+         } 
+    }
+}

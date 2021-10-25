@@ -1,0 +1,12 @@
+@import url(https://fonts.googleapis.com/css?family=Rubik:300,regular,500,600,700,800,900,300);
+@import url(https://fonts.googleapis.com/css?family=Inter:100,200,300,regular,500,600,700,800,900);
+@import url(https://fonts.googleapis.com/css?family=Ubuntu:300,regular,500,700);
+
+html {
+    font-family: $primary-font-family;
+    font-size: $rem-size;
+}
+
+body {
+    font-size: 1.6rem;
+}

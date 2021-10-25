@@ -1,0 +1,16 @@
+@import '../mixins/media.scss';
+@import './breakpoints.scss';
+
+$primary-font-family: 'Ubuntu', sans-serif;
+$secondary-font-family: 'Inter', sans-serif;
+$rem-size: 10px;
+
+@include desktop-sm {
+    $rem-size: 8px;
+}
+@include mobile {
+    $rem-size: 10px;
+}
+
+
+
